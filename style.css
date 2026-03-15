@@ -1,0 +1,1025 @@
+/* Custom Variables */
+:root {
+    --primary-color: #c83660;
+    --primary-hover: #ed0d4cf2;
+    --text-gray: #989898;
+    --font-main: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Maan lijiye aapke navbar ki height 70px ya 80px hai */
+section {
+    scroll-margin-top: 60px;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    line-height: 1.7;
+    font-weight: 300;
+    font-size: 1.1rem;
+    color: #000;
+    font-family: var(--font-main);
+}
+
+/* Typography Cleanup */
+h1,
+h2,
+h3,
+h4,
+h5,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5 {
+    font-family: var(--font-main);
+    color: #000;
+    font-weight: 700;
+}
+
+a {
+    transition: .3s all ease;
+    text-decoration: none;
+}
+
+/* Navbar Custom Styles */
+.brand-dot {
+    color: #c83660;
+}
+
+.navbar-brand {
+    font-weight: 900;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.nav-link {
+    color: #303030 !important;
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+/* Hover Line Effect (Sirf Desktop par) */
+@media (min-width: 992px) {
+    .navbar-nav .nav-item {
+        margin: 0 12px;
+        position: relative;
+    }
+
+    .navbar-nav .nav-item::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        background-color: #c83660;
+        width: 0%;
+        transition: width 0.3s ease;
+    }
+
+    .navbar-nav .nav-item:hover::after {
+        width: 100%;
+        animation: heartbeat116 1.5s ease-in-out infinite;
+    }
+}
+
+@keyframes heartbeat116 {
+
+    0%,
+    100% {
+        width: 100%;
+    }
+
+    50% {
+        width: 60%;
+    }
+}
+
+/* Join Now Button Style */
+.btn-primary-1 {
+    background-color: #c83660 !important;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+    color: #fff;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 10px rgba(200, 54, 96, 0.3);
+}
+
+.btn-primary-1:hover {
+    background-color: #ed0d4cf2 !important;
+    /* transform: translateY(-2px); */
+    box-shadow: 0 6px 15px rgba(200, 54, 96, 0.4);
+}
+
+
+/* *************2************* */
+
+/* Hero Section Settings */
+.hero-wrapper {
+    min-height: 100vh;
+    background: url('images/gym banner.png') center/cover no-repeat fixed;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Image visibility balance */
+}
+
+.fw-black {
+    font-weight: 900;
+}
+
+.text-primary-accent {
+    color: #c83660;
+    font-weight: 700;
+}
+
+.btn-hero {
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 12px 40px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.btn-hero:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* Feature Cards */
+.feature-card {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 15px;
+    transition: 0.3s ease;
+    height: 100%;
+    border-bottom: 4px solid transparent;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    border-bottom: 4px solid #c83660;
+}
+
+.icon-accent {
+    font-size: 3rem;
+    color: #c83660;
+    margin-bottom: 20px;
+    display: block;
+}
+
+/* Carousel Dots */
+.carousel-indicators-custom button {
+    background: none;
+    border: none;
+    color: #ccc;
+    font-size: 25px;
+    margin: 0 5px;
+    transition: 0.3s;
+}
+
+.carousel-indicators-custom button.active {
+    color: #c83660;
+}
+
+
+/* Parallax Background */
+.parallax-section {
+    padding: 120px 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url('images/bg_1.jpg') center/cover no-repeat fixed;
+}
+
+.subheading {
+    color: #c83660;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+
+/* ***************** 3 ****************** */
+
+/* Services Section Base */
+#services-section {
+    background-color: #ffffff;
+    padding: 80px 0;
+}
+
+/* Service Card Styling */
+.service-card {
+    background: #ffffff;
+    border: 1px solid #f0f0f0;
+    border-radius: 12px;
+    transition: all 0.4s ease;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Icon Box Animation */
+.service-icon-box {
+    display: inline-block;
+    padding: 20px;
+    background: #f8f9fa;
+    /* Light grey background for icon */
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+.service-img {
+    width: 60px;
+    /* Adjust according to your icons */
+    height: auto;
+}
+
+/* Hover Effects */
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(26, 35, 126, 0.08);
+    /* Soft Royal Blue shadow */
+    border-color: #d4af37;
+}
+
+.service-card:hover .service-icon-box {
+    background: rgba(212, 175, 55, 0.1);
+    /* Soft Gold background on hover */
+    transform: rotateY(180deg);
+    /* Icon flip effect */
+}
+
+.service-card h3 {
+    transition: 0.3s;
+}
+
+.service-card:hover h3 {
+    color: #1a237e;
+    /* Royal Blue on hover */
+}
+
+/* Typography Consistency */
+.text-gold-sub {
+    color: #d4af37;
+    letter-spacing: 3px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    display: block;
+}
+
+.gold-line {
+    width: 50px;
+    height: 3px;
+    background: #d4af37;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .service-card {
+        padding: 30px 15px;
+    }
+}
+
+
+/* *************** 4 **************** */
+
+/* Classes Card Styles */
+.class-item-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.class-item-card:hover {
+    transform: translateX(10px);
+    /* Side slide effect */
+    border-color: #c83660;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+.class-img-box {
+    width: 120px;
+    height: 85px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.class-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.class-item-card:hover .class-img-box img {
+    transform: scale(1.1);
+}
+
+.class-link {
+    color: #333;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.class-item-card:hover .class-link {
+    color: #c83660;
+}
+
+.class-meta i {
+    color: #c83660;
+}
+
+/* Motivation Parallax */
+.motivation-parallax {
+    padding: 100px 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url('images/bg_3.jpg') center/cover no-repeat fixed;
+}
+
+
+/* *************** 5 **************** */
+/* Schedule Section Main Layout */
+.schedule-section {
+    background-color: #fcfcfc;
+    /* Light clean background */
+    padding: 80px 0;
+}
+
+.Schedule_color {
+    color: #c83660;
+}
+
+/* Tabs Styling - Gold & Royal Blue */
+.nav-pills .nav-link {
+    color: #1a237e;
+    /* Royal Blue text */
+    font-weight: 600;
+    padding: 10px 25px;
+    margin: 0 5px;
+    border-radius: 5px;
+    /* Clean slightly rounded corners */
+    border: 1px solid #1a237e;
+    transition: 0.3s;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #1a237e !important;
+    /* Royal Blue Background */
+    color: #d4af37 !important;
+    /* Gold Text */
+    border-color: #d4af37;
+    box-shadow: 0 4px 12px rgba(26, 35, 126, 0.2);
+}
+
+/* Schedule Card Styling */
+.schedule-card {
+    background: #fff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid #1a237e;
+    /* Royal Blue Side Border */
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    height: 100%;
+}
+
+.schedule-card:hover {
+    transform: translateY(-5px);
+    border-left-color: #d4af37;
+    /* Hover karne par Gold ho jayega */
+}
+
+/* Image Styling */
+.schedule-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-right: 20px;
+}
+
+/* Time and Text Styling */
+.time-tag {
+    color: #1a237e;
+    /* Royal Blue */
+    background: rgba(26, 35, 126, 0.05);
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 8px;
+    border: 1px solid rgba(26, 35, 126, 0.1);
+}
+
+.card-details h5 {
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.card-details p {
+    margin-bottom: 0;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* Mobile Responsive */
+@media (max-width: 576px) {
+    .schedule-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .schedule-card img {
+        margin-right: 0;
+        margin-bottom: 15px;
+        width: 100%;
+        height: 140px;
+    }
+}
+
+/* Fixed Background CTA */
+.fitness-cta-section {
+    position: relative;
+    min-height: 500px;
+    background-image: url('images/fitness-lifestyle-bg.jpeg');
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 100px 0;
+}
+
+.fitness-cta-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Royal Blue to Dark Black Gradient */
+    background: linear-gradient(135deg, rgba(35, 37, 58, 0.8), rgba(11, 15, 25, 0.95));
+}
+
+.fitness-cta-section h2 {
+    color: #ffffff;
+    font-weight: 800;
+}
+
+.fitness-cta-section p {
+    color: #d1d1d1;
+}
+
+/* Gold Button */
+.btn-gold {
+    background: #d4af37;
+    color: #000;
+    font-weight: 700;
+    border: none;
+    padding: 12px 30px;
+    transition: 0.3s;
+}
+
+.btn-gold:hover {
+    background: #ffffff;
+    color: #0b0f19;
+}
+
+
+/* *************** 6 **************** */
+/* Trainer Section - White Theme */
+#trainer-section {
+    background-color: #ffffff;
+    /* Clean White Background */
+    padding: 80px 0;
+}
+
+.text-gold-sub {
+    color: #b8860b;
+    /* Thoda dark gold for visibility on white */
+    letter-spacing: 3px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.text-gold {
+    color: #d4af37;
+}
+
+.gold-line {
+    width: 60px;
+    height: 3px;
+    background: #d4af37;
+}
+
+.text-gold-small {
+    color: #1a237e;
+    /* Royal Blue highlight for position */
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Trainer Card */
+.trainer-card {
+    background: #ffffff;
+    padding: 30px 20px;
+    border: 1px solid #f0f0f0;
+    /* Subtle border */
+    border-radius: 10px;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    /* Soft shadow */
+    height: 100%;
+}
+
+.trainer-card:hover {
+    border-color: #d4af37;
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.15);
+}
+
+/* Image Styling */
+.trainer-card img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border: 4px solid #f8f9fa;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.4s;
+}
+
+.trainer-card:hover img {
+    border-color: #d4af37;
+    transform: scale(1.05);
+}
+
+/* Text Colors */
+.text-dark {
+    color: #1a1a1a !important;
+}
+
+.text-secondary {
+    color: #666 !important;
+}
+
+.text-muted {
+    color: #888 !important;
+}
+
+/* Pricing Section Styling */
+#pricing-section {
+    background-color: #f8f9fa;
+    /* Light grey for contrast with White Trainer section */
+    padding: 100px 0;
+}
+
+.text-royal-blue {
+    color: #1a237e;
+}
+
+/* Pricing Card Base */
+.pricing-card {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 15px;
+    border: 1px solid #eee;
+    transition: all 0.4s ease;
+    position: relative;
+    height: 100%;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Active/Premium Plan (Royal Blue) */
+.active-plan {
+    background: #1a237e;
+    /* Royal Blue */
+    border-color: #1a237e;
+    transform: scale(1.05);
+    z-index: 1;
+}
+
+.active-plan:hover {
+    transform: scale(1.08) translateY(-10px);
+}
+
+/* Price Text */
+.price {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 20px 0;
+}
+
+.price .currency {
+    font-size: 1.5rem;
+    vertical-align: top;
+    margin-right: 5px;
+}
+
+.price .period {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #888;
+}
+
+.active-plan .price .period {
+    color: #ccc;
+}
+
+/* Features List */
+.pricing-features {
+    margin-bottom: 30px;
+}
+
+.pricing-features li {
+    padding: 10px 0;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.active-plan .pricing-features li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pricing-features li.disabled {
+    color: #ccc;
+    text-decoration: line-through;
+}
+
+/* Popular Badge */
+.badge-popular {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #d4af37;
+    color: #000;
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+/* Buttons */
+.btn-outline-royal {
+    border: 2px solid #1a237e;
+    color: #1a237e;
+    font-weight: 700;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.btn-outline-royal:hover {
+    background: #1a237e;
+    color: #fff;
+}
+
+.btn-gold {
+    background: #d4af37;
+    color: #000;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.btn-gold:hover {
+    background: #fff;
+    color: #1a237e;
+}
+
+/* Responsive Fix */
+@media (max-width: 991px) {
+    .active-plan {
+        transform: scale(1);
+        margin: 20px 0;
+    }
+
+    .active-plan:hover {
+        transform: translateY(-10px);
+    }
+}
+
+
+/* *************** 7 **************** */
+
+/* Pricing Section Styling */
+#pricing-section {
+    background-color: #f8f9fa;
+    /* Light grey for contrast with White Trainer section */
+    padding: 100px 0;
+}
+
+.text-royal-blue {
+    color: #1a237e;
+}
+
+/* Pricing Card Base */
+.pricing-card {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 15px;
+    border: 1px solid #eee;
+    transition: all 0.4s ease;
+    position: relative;
+    height: 100%;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Active/Premium Plan (Royal Blue) */
+.active-plan {
+    background: #1a237e;
+    /* Royal Blue */
+    border-color: #1a237e;
+    transform: scale(1.05);
+    z-index: 1;
+}
+
+.active-plan:hover {
+    transform: scale(1.08) translateY(-10px);
+}
+
+/* Price Text */
+.price {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 20px 0;
+}
+
+.price .currency {
+    font-size: 1.5rem;
+    vertical-align: top;
+    margin-right: 5px;
+}
+
+.price .period {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #888;
+}
+
+.active-plan .price .period {
+    color: #ccc;
+}
+
+/* Features List */
+.pricing-features {
+    margin-bottom: 30px;
+}
+
+.pricing-features li {
+    padding: 10px 0;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.active-plan .pricing-features li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pricing-features li.disabled {
+    color: #ccc;
+    text-decoration: line-through;
+}
+
+/* Popular Badge */
+.badge-popular {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #d4af37;
+    color: #000;
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+/* Buttons */
+.btn-outline-royal {
+    border: 2px solid #1a237e;
+    color: #1a237e;
+    font-weight: 700;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.btn-outline-royal:hover {
+    background: #1a237e;
+    color: #fff;
+}
+
+.btn-gold {
+    background: #d4af37;
+    color: #000;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.btn-gold:hover {
+    background: #fff;
+    color: #1a237e;
+}
+
+/* Responsive Fix */
+@media (max-width: 991px) {
+    .active-plan {
+        transform: scale(1);
+        margin: 20px 0;
+    }
+
+    .active-plan:hover {
+        transform: translateY(-10px);
+    }
+}
+
+
+/* ***************** 8 ****************** */
+/* Contact Styling */
+
+.btn-royal-blue {
+    background-color: #1a237e;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Button Hover - Luxury Gold Effect */
+.btn-royal-blue:hover {
+    background-color: #d4af37 !important;
+    /* Premium Gold */
+    color: #000 !important;
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+}
+
+/* Form Input - Focus State */
+.form-control {
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #d4af37 !important;
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.2) !important;
+    outline: none;
+}
+
+/* --- Animations --- */
+
+/* Heartbeat Effect for Emoji */
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.heart-icon {
+    display: inline-block;
+    animation: heartbeat 1.5s infinite ease-in-out;
+}
+
+/* ***************** 9 ****************** */
+
+/* Footer Custom Styling */
+.bg-dark-custom {
+    background-color: #0b0f19;
+    /* Deep dark theme */
+    color: #ffffff;
+}
+
+.border-gold-top {
+    border: 1px solid rgba(212, 175, 55, 0.2) !important;
+    border-top: 3px solid #d4af37 !important;
+    border-radius: 10px;
+}
+
+.text-gold {
+    color: #d4af37 !important;
+}
+
+.footer-heading {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.text-light-muted {
+    color: #b0b0b0;
+    line-height: 1.6;
+}
+
+/* Links Styling */
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #b0b0b0;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #d4af37;
+    padding-left: 5px;
+}
+
+/* Social Icons */
+.social-link {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #d4af37;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.social-link:hover {
+    background: #d4af37;
+    color: #000;
+    transform: translateY(-3px);
+}
+
+/* Form Styling */
+.subscribe-form .form-control {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    color: #fff;
+    border-radius: 5px 0 0 5px;
+}
+
+.btn-gold-footer {
+    background: #d4af37;
+    color: #000;
+    font-weight: 700;
+    border: none;
+    padding: 0 20px;
+    border-radius: 0 5px 5px 0;
+}
+
+.btn-gold-footer:hover {
+    background: #fff;
+    color: #0b0f19;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .footer-section {
+        text-align: center;
+    }
+
+    .footer-links a:hover {
+        padding-left: 0;
+    }
+
+    .ms-auto {
+        margin-left: 0 !important;
+    }
+}
+
